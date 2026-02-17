@@ -1,25 +1,32 @@
+/* style.css - 广州陇诚科技有限公司企业网站样式 */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 关键修改：确保html和body高度占满视口，并启用Flex布局 */
-html, body {
+/* === 页脚修复关键代码（新增）=== */
+html {
   height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Helvetica Neue", "Microsoft YaHei", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
 }
 
-/* 关键修改：main自动占据剩余空间，将footer推到底部 */
+/* 主要内容区域自动撑开，将页脚推到底部 */
 main {
   flex: 1;
   width: 100%;
 }
+/* === 页脚修复代码结束 === */
 
 .container {
   width: 90%;
@@ -28,6 +35,7 @@ main {
   padding: 0 15px;
 }
 
+/* 导航栏 */
 nav {
   background-color: #1E56A0;
   color: white;
@@ -67,6 +75,7 @@ nav ul li a.active {
   background-color: #0f3a70;
 }
 
+/* 首屏大图 (仅首页使用) */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x600/1E56A0/FFFFFF?text=食品安全+产教融合') no-repeat center center/cover;
   height: 60vh;
@@ -102,6 +111,7 @@ nav ul li a.active {
   background-color: #3d8b40;
 }
 
+/* 通用区块 */
 section {
   padding: 60px 0;
   width: 100%;
@@ -114,6 +124,7 @@ section h2 {
   color: #1E56A0;
 }
 
+/* 特色卡片 */
 .grid3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,6 +144,7 @@ section h2 {
   margin-bottom: 15px;
 }
 
+/* 合作伙伴列表 */
 .partner-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -151,6 +163,7 @@ section h2 {
   margin-bottom: 10px;
 }
 
+/* 联系表单 */
 .contact-form {
   max-width: 700px;
   margin: 0 auto;
@@ -192,6 +205,7 @@ section h2 {
   background-color: #0f3a70;
 }
 
+/* 页脚 */
 footer {
   background-color: #333;
   color: #ddd;
@@ -200,6 +214,7 @@ footer {
   width: 100%;
 }
 
+/* 响应式 */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
