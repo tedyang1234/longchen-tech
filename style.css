@@ -839,3 +839,230 @@ body {
     grid-template-columns: 1fr; /* 变为单列 */
   }
 }
+/* === About 页面专属美化样式 === */
+
+/* 1. 简介部分：左右布局 */
+.about-intro-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* 文字稍多，图片稍窄 */
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.lead-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2c6fbb;
+  padding-left: 1rem;
+}
+
+.intro-text p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.intro-image-box {
+  position: relative;
+}
+
+.about-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(44, 111, 187, 0.15); /* 蓝色调阴影 */
+  transition: transform 0.3s;
+}
+
+.about-main-img:hover {
+  transform: scale(1.02);
+}
+
+.img-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* 2. 使命部分：醒目横幅 */
+.mission-banner {
+  background: linear-gradient(135deg, #2c6fbb 0%, #1e5a99 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 20px rgba(44, 111, 187, 0.3);
+}
+
+.mission-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.mission-banner h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+.mission-text {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Microsoft YaHei", sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 3. 愿景部分：三列卡片 */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-subtitle::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #2c6fbb;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.vision-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.vision-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(44, 111, 187, 0.15);
+  border-color: #2c6fbb;
+}
+
+.v-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.vision-card h4 {
+  color: #2c6fbb;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.vision-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 4. 服务区域：可视化标签 */
+.service-area-section {
+  background: #f9fbfd;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px dashed #cbdceb;
+}
+
+.area-map-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.map-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.area-tags {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.area-tag {
+  background: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  transition: all 0.3s;
+}
+
+.area-tag.active {
+  background: #2c6fbb;
+  color: white;
+  border-color: #2c6fbb;
+  transform: scale(1.05);
+}
+
+.area-desc {
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === 移动端适配 === */
+@media (max-width: 768px) {
+  .about-intro-section {
+    grid-template-columns: 1fr; /* 变为单列 */
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .intro-image-box {
+    order: -1; /* 图片在手机上显示在文字上方 */
+  }
+  
+  .mission-text {
+    font-size: 1.5rem;
+  }
+  
+  .area-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .area-tag {
+    width: 80%;
+  }
+}
