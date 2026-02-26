@@ -413,7 +413,195 @@ body {
   width: 100%;
   transition: background 0.3s;
 }
+/* === 解决方案页面样式 === */
+.solution-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.solution-icon {
+  font-size: 3rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.solution-card h3 {
+  text-align: center;
+  color: #2c6fbb;
+  margin-bottom: 1rem;
+}
+
+.solution-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  background: #f9fbfd;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.feature-item strong {
+  display: block;
+  color: #2c6fbb;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 协同机制步骤条 */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: #f0f7ff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  min-width: 120px;
+}
+
+.step-num {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #2c6fbb;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.step-arrow {
+  font-size: 1.5rem;
+  color: #ccc;
+  font-weight: bold;
+}
+
+/* === 合作生态页面样式 === */
+.partner-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.partner-section h3 {
+  color: #333;
+  border-left: 4px solid #2c6fbb;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  transition: all 0.3s;
+}
+
+.tag:hover {
+  background: #2c6fbb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* === 社会服务页面样式 (网格) === */
+.service-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid transparent;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-top-color: #2c6fbb;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.service-box h3 {
+  color: #2c6fbb;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.service-box p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* === 移动端适配优化 === */
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+  }
+  .step-arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+  .solution-card, .content-card {
+    padding: 1.5rem;
+  }
+}
 .submit-btn:hover {
   background: #1e5a99;
 }
