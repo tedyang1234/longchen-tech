@@ -27,65 +27,100 @@
   </header>
 
 <main class="main-content">
-  <h2 class="page-title">关于我们</h2>
-
-  <!-- 第一部分：公司简介 + 形象图 (左右布局) -->
-  <div class="about-intro-section">
-    <div class="intro-text">
-      <p class="lead-paragraph">
-        <strong>广州陇诚科技有限公司</strong>（Guangzhou Longcheng Technology Co., Ltd.）是一家专注于<strong>食品安全快速检测技术推广</strong>与<strong>产教融合实践</strong>的高新技术服务企业。
-      </p>
-      <p>
-        我们致力于搭建高校、行业、企业与社会之间的桥梁，通过技术创新与模式创新，解决食品安全检测人才短缺与技术落地难的痛点。业务覆盖广东、广西、海南等省份，服务对象涵盖高等院校、行业协会、食品企业及社区居民。
-      </p>
-    </div>
-    <div class="intro-image-box">
-      <!-- 请替换为您的公司实景或团队照片，如 images/about-team.jpg -->
-      <img src="https://picsum.photos/600/400?grayscale&text=陇诚科技团队" alt="广州陇诚科技团队" class="about-main-img">
-      <div class="img-caption">专注食品安全 · 赋能产教融合</div>
-    </div>
-  </div>
-
-  <!-- 第二部分：使命 (醒目引用样式) -->
-  <div class="mission-banner">
-    <div class="mission-icon">🎯</div>
-    <h3>我们的使命</h3>
-    <p class="mission-text">“以检促教、以教强检、服务社会”</p>
-  </div>
-
-  <!-- 第三部分：愿景 (三列卡片，呼应首页风格) -->
-  <h3 class="section-subtitle">我们的愿景</h3>
-  <div class="vision-cards-container">
-    <div class="vision-card">
-      <div class="v-icon">🎓</div>
-      <h4>教育赋能</h4>
-      <p>让学生掌握前沿检测技能，无缝对接产业人才需求，培养新时代食品卫士。</p>
-    </div>
-    <div class="vision-card">
-      <div class="v-icon">🏭</div>
-      <h4>产业护航</h4>
-      <p>为地方特色食品产业（如腊肠、茶叶等）提供坚实的技术支撑，助力品牌升级。</p>
-    </div>
-    <div class="vision-card">
-      <div class="v-icon">🌍</div>
-      <h4>社会共治</h4>
-      <p>推动食品安全知识普及，构建政府、企业、公众共同参与的社会共治新格局。</p>
-    </div>
-  </div>
-
-  <!-- 第四部分：服务区域 (可视化标签) -->
-  <div class="service-area-section">
-    <h3 class="section-subtitle">服务区域</h3>
-    <div class="area-map-box">
-      <div class="map-icon">📍</div>
-      <div class="area-tags">
-        <span class="area-tag active">广东省</span>
-        <span class="area-tag">广西壮族自治区</span>
-        <span class="area-tag">海南省</span>
+  
+  <!-- 1. 首页专属：超大 Banner (Hero Section) -->
+  <section class="hero-banner">
+    <!-- 背景图：请确保 images/hero-bg.jpg 存在。如果没有，会自动显示灰色占位图 -->
+    <img src="images/hero-bg.jpg" alt="食品安全检测场景" class="hero-bg-img" onerror="this.src='https://picsum.photos/1920/800?grayscale&text=Food+Safety+Lab'">
+    
+    <div class="hero-content">
+      <h1 class="hero-title">以检促教 · 以教强检 · 服务社会</h1>
+      <p class="hero-subtitle">专注食品安全快速检测技术推广与产教融合实践的高新技术服务企业</p>
+      <div class="hero-btn-group">
+        <a href="contact.html" class="btn btn-primary">立即咨询</a>
+        <a href="solutions.html" class="btn btn-outline">了解方案</a>
       </div>
-      <p class="area-desc">主要服务对象：<strong>高等院校</strong>、<strong>行业协会</strong>、<strong>食品企业</strong>及<strong>社区居民</strong></p>
     </div>
-  </div>
+    <!-- 遮罩层，确保文字清晰 -->
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- 2. 首页专属：数据优势条 (Stats Bar) -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">合作院校</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">服务企业</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100+</span>
+      <span class="stat-label">公益检测场</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3省</span>
+      <span class="stat-label">覆盖区域</span>
+    </div>
+  </section>
+
+  <!-- 3. 首页专属：核心价值预览 (Vision Grid) -->
+  <h2 class="section-main-title">我们的核心价值</h2>
+  <section class="vision-grid">
+    <!-- 卡片 1：链接到 about.html -->
+    <div class="vision-card-pro">
+      <div class="card-icon-box">🎓🧪</div>
+      <h3>教育赋能</h3>
+      <p>让学生掌握前沿快检技能，无缝对接产业人才需求，培养新时代食品卫士。</p>
+      <a href="about.html" class="card-link">了解更多 &rarr;</a>
+    </div>
+
+    <!-- 卡片 2：链接到 solutions.html -->
+    <div class="vision-card-pro">
+      <div class="card-icon-box">🏭🛡️</div>
+      <h3>产业护航</h3>
+      <p>为地方特色食品产业（如腊肠、茶叶等）提供坚实的技术支撑，助力品牌升级。</p>
+      <a href="solutions.html" class="card-link">查看方案 &rarr;</a>
+    </div>
+
+    <!-- 卡片 3：链接到 service.html -->
+    <div class="vision-card-pro">
+      <div class="card-icon-box">🤝🌿</div>
+      <h3>社会共治</h3>
+      <p>推动食品安全知识普及，构建政府、企业、公众共同参与的社会共治新格局。</p>
+      <a href="service.html" class="card-link">参与服务 &rarr;</a>
+    </div>
+  </section>
+
+  <!-- 4. 首页专属：服务覆盖区域 (Coverage Section) -->
+  <section class="coverage-section">
+    <div class="coverage-content">
+      <h2 class="section-main-title" style="color: white; margin-bottom: 1rem; border-color: rgba(255,255,255,0.3);">服务覆盖区域</h2>
+      <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">深耕华南，辐射全国，为多地提供专业技术支持</p>
+      
+      <div class="province-tags">
+        <div class="province-tag active">
+          <span class="p-icon">📍</span>
+          <strong>广东省</strong>
+          <small>核心服务区</small>
+        </div>
+        <div class="province-tag">
+          <span class="p-icon">📍</span>
+          <strong>广西壮族自治区</strong>
+          <small>技术合作区</small>
+        </div>
+        <div class="province-tag">
+          <span class="p-icon">📍</span>
+          <strong>海南省</strong>
+          <small>拓展服务区</small>
+        </div>
+      </div>
+      
+      <a href="contact.html" class="btn btn-white-sm">联系当地服务 &rarr;</a>
+    </div>
+  </section>
+
 </main>
 
   <footer class="site-footer">
