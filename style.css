@@ -832,13 +832,6 @@ body {
 .submit-btn:hover {
   background: #1e5a99;
 }
-
-/* === 移动端适配 (手机上一列显示) === */
-@media (max-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr; /* 变为单列 */
-  }
-}
 /* === About 页面专属美化样式 === */
 
 /* 1. 简介部分：左右布局 */
@@ -1061,6 +1054,13 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+/* === 移动端适配 (手机上一列显示) === */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* 变为单列 */
+  }
+}
   
   .area-tag {
     width: 80%;
