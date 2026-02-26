@@ -1668,8 +1668,5 @@ body {
     grid-template-columns: 1fr; /* 变为单列 */
   }
 }
-  
-  .area-tag {
-    width: 80%;
   }
-}
+
