@@ -28,29 +28,32 @@
   <!-- 👆👆👆 导航栏结束 👆👆👆 -->
 <!-- 头部同 index.html -->
 <main class="main-content">
-  <h2>关于我们</h2>
+  <h2 class="page-title">关于我们</h2>
   
-  <!-- 公司实景图占位 -->
-  <div class="image-container">
-    <img src="https://picsum.photos/800/400?grayscale" 
-         alt="广州陇诚科技有限公司办公环境与实验室" 
-         class="content-image">
+  <div class="content-card">
+    <!-- 图片容器：让图片自适应宽度 -->
+    <div class="image-wrapper">
+      <!-- 请确保 about.jpg 在 images 文件夹中，如果没有，先放一张占位图 -->
+      <img src="images/about.jpg" alt="公司团队或办公环境" class="content-image" onerror="this.src='https://picsum.photos/800/400?grayscale'">
+    </div>
+
+    <div class="text-block">
+      <p class="lead-text"><strong>广州陇诚科技有限公司</strong>（Guangzhou Longcheng Technology Co., Ltd.）是一家专注于食品安全快速检测技术推广与产教融合实践的高新技术服务企业。</p>
+
+      <h3>我们的使命</h3>
+      <p class="highlight-box">以检促教、以教强检、服务社会</p>
+
+      <h3>我们的愿景</h3>
+      <ul class="vision-list">
+        <li><strong>教育赋能</strong>：让学生掌握前沿检测技能</li>
+        <li><strong>产业护航</strong>：为地方特色食品产业提供技术支撑</li>
+        <li><strong>社会共治</strong>：推动食品安全知识普及</li>
+      </ul>
+
+      <h3>服务区域</h3>
+      <p>主要覆盖广东、广西、海南等省份，服务对象包括高等院校、行业协会、食品企业及社区居民。</p>
+    </div>
   </div>
-
-  <p><strong>广州陇诚科技有限公司</strong>（Guangzhou Longcheng Technology Co., Ltd.）是一家专注于食品安全快速检测技术推广与产教融合实践的高新技术服务企业。</p>
-
-  <h3>我们的使命</h3>
-  <p>以检促教、以教强检、服务社会</p>
-
-  <h3>我们的愿景</h3>
-  <ul>
-    <li><strong>教育赋能</strong>：让学生掌握前沿检测技能</li>
-    <li><strong>产业护航</strong>：为地方特色食品产业提供技术支撑</li>
-    <li><strong>社会共治</strong>：推动食品安全知识普及</li>
-  </ul>
-
-  <h3>服务区域</h3>
-  <p>主要覆盖广东、广西、海南等省份，服务对象包括高等院校、行业协会、食品企业及社区居民。</p>
 </main>
 <!-- 页脚同上 -->
   <!-- === 页脚开始 (复制到所有页面) === -->
