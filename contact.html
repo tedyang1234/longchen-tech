@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>广州陇诚科技有限公司 - 联系我们</title> <!-- 每个页面标题不同，请自行修改 -->
+  <title>广州陇诚科技有限公司 - 联系我们</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- 👇👇👇 复制这段导航栏代码到所有子页面的 body 最开始 👇👇👇 -->
+  <!-- 导航栏 -->
   <header class="sticky-header">
     <nav class="navbar">
-      <!-- 确保您的 logo.png 在 images 文件夹里，或者直接用文字 -->
       <img src="images/logo.png" alt="广州陇诚科技有限公司 Logo" class="site-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="logo-text" style="display:none; font-size: 1.5rem; font-weight: bold; color: #2c6fbb;">陇诚科技</div>
       
@@ -25,64 +24,79 @@
       </ul>
     </nav>
   </header>
-  <!-- 👆👆👆 导航栏结束 👆👆👆 -->
-<main class="main-content">
-  <h2 class="page-title">联系我们</h2>
 
-  <div class="contact-container">
-    <!-- 左侧：联系信息 -->
-    <div class="contact-info-card">
-      <h3>联系方式</h3>
-      <div class="info-item">
-        <span class="icon">📍</span>
-        <p><strong>地址：</strong>广州市天河区XX路XX号</p>
-      </div>
-      <div class="info-item">
-        <span class="icon">📞</span>
-        <p><strong>电话：</strong>020-XXXXXXXX</p>
-      </div>
-      <div class="info-item">
-        <span class="icon">✉️</span>
-        <p><strong>邮箱：</strong>info@longcheng-tech.com</p>
-      </div>
-      <div class="info-item">
-        <span class="icon">⏰</span>
-        <p><strong>工作时间：</strong>周一至周五 9:00–18:00</p>
-      </div>
-      
-      <!-- 如果有公司外景图，放在这里 -->
-      <img src="images/contact-bg.jpg" alt="公司位置" class="content-image" style="margin-top: 20px;" onerror="this.style.display='none'">
-    </div>
+  <main class="main-content">
+    <h2 class="page-title">联系我们</h2>
 
-    <!-- 右侧：表单 -->
-    <div class="contact-form-card">
-      <h3>在线留言</h3>
-      <form id="contactForm" class="contact-form">
-        <div class="form-group">
-          <label>姓名</label>
-          <input type="text" placeholder="请输入您的姓名" required />
+    <div class="contact-container">
+      <!-- 左侧：联系信息 -->
+      <div class="contact-info-card">
+        <h3>联系方式</h3>
+        <div class="info-item">
+          <span class="icon">📍</span>
+          <p><strong>地址：</strong>广州市天河区XX路XX号</p>
         </div>
-        <div class="form-group">
-          <label>邮箱</label>
-          <input type="email" placeholder="example@email.com" required />
+        <div class="info-item">
+          <span class="icon">📞</span>
+          <p><strong>电话：</strong>020-XXXXXXXX</p>
         </div>
-        <div class="form-group">
-          <label>留言内容</label>
-          <textarea placeholder="请输入您想咨询的内容..." rows="5" required></textarea>
+        <div class="info-item">
+          <span class="icon">✉️</span>
+          <p><strong>邮箱：</strong>info@longcheng-tech.com</p>
         </div>
-        <button type="submit" class="submit-btn">提交咨询</button>
-      </form>
+        <div class="info-item">
+          <span class="icon">⏰</span>
+          <p><strong>工作时间：</strong>周一至周五 9:00–18:00</p>
+        </div>
+        
+        <!-- 公司外景图占位 -->
+        <img src="images/contact-bg.jpg" alt="公司位置" class="content-image" style="margin-top: 20px;" onerror="this.style.display='none'">
+      </div>
+
+      <!-- 右侧：表单 (已对接 Formspree) -->
+      <div class="contact-form-card">
+        <h3>在线留言</h3>
+        
+        <!-- ✅ 修改点：添加了 action, method 和 name 属性 -->
+        <form 
+          id="contactForm" 
+          class="contact-form" 
+          action="https://formspree.io/f/mzdawpyb" 
+          method="POST"
+        >
+          <div class="form-group">
+            <label>姓名</label>
+            <!-- 添加 name="name" -->
+            <input type="text" name="name" placeholder="请输入您的姓名" required />
+          </div>
+          
+          <div class="form-group">
+            <label>邮箱</label>
+            <!-- 添加 name="email" -->
+            <input type="email" name="email" placeholder="example@email.com" required />
+          </div>
+          
+          <div class="form-group">
+            <label>留言内容</label>
+            <!-- 添加 name="message" -->
+            <textarea name="message" placeholder="请输入您想咨询的内容..." rows="5" required></textarea>
+          </div>
+          
+          <!-- 隐藏字段：设置邮件标题 -->
+          <input type="hidden" name="_subject" value="新留言 - 广州陇诚科技有限公司官网">
+          
+          <button type="submit" class="submit-btn">提交咨询</button>
+        </form>
+      </div>
     </div>
-  </div>
-</main>
-  <!-- === 页脚开始 (复制到所有页面) === -->
+  </main>
+
+  <!-- 页脚 -->
   <footer class="site-footer">
     <p>© 2023 广州陇诚科技有限公司 版权所有 | 粤ICP备XXXXXXXX号</p>
     <p>地址：广州市天河区XX路XX号 | 电话：020-XXXXXXXX | 邮箱：info@longcheng-tech.com</p>
   </footer>
-  <!-- === 页脚结束 === -->
 
-  <!-- 引入 JS (必须在页脚之后) -->
   <script src="main.js"></script>
 </body>
 </html>
