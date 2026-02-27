@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+    /*   e.preventDefault();
       alert('感谢您的咨询！\n（当前为演示模式，数据未实际发送）');
+      */
       this.reset();
     });
   }
