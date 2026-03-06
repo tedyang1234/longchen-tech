@@ -28,21 +28,28 @@
 
 <main class="main-content">
   
-  <!-- 1. 首页专属：超大 Banner (Hero Section) -->
+  <!-- 1. 首页专属：超大 Banner (Hero Section) - 已优化为全屏背景模式 -->
   <section class="hero-banner">
-    <!-- 背景图：请确保 images/hero-bg.jpg 存在。如果没有，会自动显示灰色占位图 -->
-    <img src="images/hero-bg.jpg" alt="食品安全检测场景" class="hero-bg-img">
+    <!-- 
+      注意：这里不再使用 <img> 标签。
+      请在 style.css 的 .hero-banner 中配置 background-image，
+      或者直接在 style 属性中写入图片路径（推荐后者以便快速预览）。
+    -->
+    <div class="hero-bg-img" style="background-image: url('images/hero-bg.jpg');"></div>
     
+    <!-- 遮罩层：由 CSS 控制渐变，确保文字清晰 -->
+    <div class="hero-overlay"></div>
+    
+    <!-- 内容区域：z-index 确保在最上层 -->
     <div class="hero-content">
       <h1 class="hero-title">以检促教 · 以教强检 · 服务社会</h1>
       <p class="hero-subtitle">专注食品安全快速检测技术推广与产教融合实践的高新技术服务企业</p>
+      
       <div class="hero-btn-group">
         <a href="contact.html" class="btn btn-primary">立即咨询</a>
         <a href="solutions.html" class="btn btn-outline">了解方案</a>
       </div>
     </div>
-    <!-- 遮罩层，确保文字清晰 -->
-    <div class="hero-overlay"></div>
   </section>
 
   <!-- 2. 首页专属：数据优势条 (Stats Bar) -->
