@@ -100,11 +100,22 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* 修改前：针对 img 标签 */
+/* .hero-bg-img { object-fit: cover; ... } */
+
+/* 修改后：针对 div 背景图 */
 .hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  /* 关键：使用 background 属性代替 object-fit */
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: slowZoom 20s infinite alternate;
 }
 
 .hero-overlay {
